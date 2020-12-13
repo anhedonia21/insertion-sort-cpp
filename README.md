@@ -9,10 +9,10 @@ This program has only two types of sorting methods, char and integer
 
 ## EXAMPLE
 
-# FOR CHARS
+### FOR CHARS
 
-!(char)[https://i.hizliresim.com/MBIrOt.png]
+![char](https://i.hizliresim.com/MBIrOt.png)
 
-# FOR INTEGERS
+### FOR INTEGERS
 
-!(integer)[https://i.hizliresim.com/1R9tZd.png]
+![integer](https://i.hizliresim.com/1R9tZd.png)
