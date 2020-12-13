@@ -5,7 +5,7 @@ A basic sorting program for char and integer types of arrays
 
 When you run the program, you'll see an input line and you will have two choices of choosing your array's type
 
-This program has only two types of sorting methods, char and integer
+This program has only two types of sorting methods, chars and integers
 
 ## EXAMPLE
 
