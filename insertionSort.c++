@@ -3,15 +3,12 @@
 #include <cstring>
 #include <vector>
 
-#define var auto
-
-
 template <typename T>
 class insertionSort
 {
     public:
 
-    void insertionSortInt(T arr[], int lenght) 
+    void sort(T arr[], int lenght) 
     {
         int i, k, key;
         for(i = 1; i < lenght; i++)
@@ -27,22 +24,6 @@ class insertionSort
         } 
     }
 
-    void insertionSortChar(T arr[], int lenght)
-    {
-        int i, k, key;
-        for (i = 1; i < lenght; i++)
-        {
-            key = arr[i];
-            k = i - 1;
-            while (k >= 0 && arr[k] > key)
-            {
-                arr[k + 1] = arr[k];
-                k = k - 1;
-            }
-            arr[k + 1] = key;
-        }
-    }
-
     void printArray(T arr[], int n)
     {
         
@@ -54,8 +35,6 @@ class insertionSort
 };
 
 
-
-
 int main()
 {
 
@@ -63,14 +42,12 @@ int main()
     std::cout << "What type of array you want to create?\nAvailable types are: char, int\n-> ";
     std::cin >> input;
 
-
     if (input == "char")
     {
         insertionSort<char> *ptr = new insertionSort<char>();
 
         int index = 0;
         char buffer[11];
-
 
         std::string arr;
         std::string inp;
@@ -94,7 +71,7 @@ int main()
                     
                 int lenght = sizeof(char_arr) / sizeof(char_arr[0]);
 
-                ptr -> insertionSortChar(char_arr, lenght);
+                ptr -> sort(char_arr, lenght);
                 ptr -> printArray(char_arr, lenght);
 
                 break;
@@ -115,6 +92,7 @@ int main()
             index++;
         }
     }
+    
 
     else if (input == "int")
     {
@@ -143,7 +121,7 @@ int main()
 
                 if(arr_lenght == 0) {std::cout << "The array is empty!"; break;} // big Oh O(n2)
 
-                ptr -> insertionSortInt(newIntArray, arr_lenght);
+                ptr -> sort(newIntArray, arr_lenght);
                 ptr -> printArray(newIntArray, arr_lenght);
                 break;
 
@@ -165,10 +143,11 @@ int main()
             }
         }
     }
+    
 
     else
     {
-        std::cout << "You didn't select any specified types up below";
+        std::cout << "You didn't select any specified types";
     }
     return 0;
 }
